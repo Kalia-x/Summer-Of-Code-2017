@@ -22,15 +22,3 @@ cheapData[cheapData$location=="Uzupis", "weights"] = 0.9
 cheapData$weighting = cheapData$weights * (cheapData$nights / cheapData$price)
 orderedData = arrange(cheapData, desc(weighting))
 
-###############
-
-#
-# for(x in 1:length(prices)) {
-#     if((total + prices[1+x]) > 1200) {
-#         break
-#     }
-#     total = total + prices[1+x]
-#     holCount = holCount + 1
-# }
-#
-# print(holCount)
